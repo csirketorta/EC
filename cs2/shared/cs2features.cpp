@@ -595,12 +595,8 @@ static vec3 cs2::features::get_target_angle(QWORD local_player, vec3 position, D
 			goto skip_recoil;
 
 		if (weapon_class == cs2::WEAPON_CLASS::Pistol)
-		{
-			if (num_shots < 2)
-			{
-				goto skip_recoil;
-			}
-		}
+			goto skip_recoil;
+
 		angle.x -= aim_punch.x * 2.0f;
 		angle.y -= aim_punch.y * 2.0f;
 	}
