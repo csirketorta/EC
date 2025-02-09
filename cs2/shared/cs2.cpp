@@ -875,7 +875,7 @@ cs2::WEAPON_CLASS cs2::player::get_weapon_class(QWORD player)
 	//
 	// C_EconEntity::m_AttributeManager + C_AttributeContainer::m_Item + C_EconItemView::m_iItemDefinitionIndex
 	//
-	WORD weapon_index = vm::read_i16(game_handle, weapon + 0x1140 + 0x50 + 0x1BA);
+	WORD weapon_index = vm::read_i16(game_handle, weapon + 0x1148 + 0x50 + 0x1BA);
 
 	/* knife */
 	{
@@ -902,6 +902,7 @@ cs2::WEAPON_CLASS cs2::player::get_weapon_class(QWORD player)
 			46, // {"molotov"},
 			48, // {"incgrenade"},
 			49, // {"c4"},
+			57, // {"healthshot"}
 		};
 		for (int i = 0; i < sizeof(data) / sizeof(*data); i++)
 		{
